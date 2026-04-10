@@ -11420,19 +11420,15 @@
   },
   "FTSE100": {
     "label": "FTSE 100",
-    "value": 10603.5,
-    "previous": 10603.5,
+    "value": 10632.0400390625,
+    "previous": 10632.0400390625,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
     "category": "Market Indices",
-    "value_date": "2026-04-09",
-    "previous_date": "2026-04-08",
+    "value_date": "2026-04-10",
+    "previous_date": "2026-04-09",
     "history": [
-      [
-        "2025-04-09",
-        7679.5
-      ],
       [
         "2025-04-10",
         7913.3
@@ -12436,20 +12432,24 @@
       [
         "2026-04-09",
         10603.5
+      ],
+      [
+        "2026-04-10",
+        10632.04
       ]
     ],
-    "sma50": 10380.01201171875,
-    "sma200": 9693.504506835938,
+    "sma50": 10389.5648046875,
+    "sma200": 9702.986708984376,
     "high52w": 10910.599609375,
-    "low52w": 7679.5,
+    "low52w": 7913.2998046875,
     "signal": "BULLISH",
-    "commentary": "FTSE 100 at 10,604 \u25ac. UK equities reflecting global risk sentiment.",
+    "commentary": "FTSE 100 at 10,632 \u25ac. UK equities reflecting global risk sentiment.",
     "momentum": "DECEL"
   },
   "NIKKEI": {
     "label": "Nikkei 225",
-    "value": 56999.171875,
-    "previous": 56999.171875,
+    "value": 56924.109375,
+    "previous": 56924.109375,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
@@ -13435,32 +13435,28 @@
       ],
       [
         "2026-04-10",
-        56999.17
+        56924.11
       ]
     ],
-    "sma50": 54906.96046875,
-    "sma200": 48357.9664453125,
+    "sma50": 54905.45921875,
+    "sma200": 48357.5911328125,
     "high52w": 58850.26953125,
     "low52w": 33585.578125,
     "signal": "BULLISH",
-    "commentary": "Nikkei at 56,999 \u25ac. JPY dynamics and global tech flows key drivers.",
+    "commentary": "Nikkei at 56,924 \u25ac. JPY dynamics and global tech flows key drivers.",
     "momentum": null
   },
   "VIX": {
     "label": "VIX",
-    "value": 19.489999771118164,
-    "previous": 19.489999771118164,
+    "value": 19.479999542236328,
+    "previous": 19.479999542236328,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
     "category": "Market Sentiment",
-    "value_date": "2026-04-09",
-    "previous_date": "2026-04-08",
+    "value_date": "2026-04-10",
+    "previous_date": "2026-04-09",
     "history": [
-      [
-        "2025-04-09",
-        33.62
-      ],
       [
         "2025-04-10",
         40.72
@@ -14460,20 +14456,24 @@
       [
         "2026-04-09",
         19.49
+      ],
+      [
+        "2026-04-10",
+        19.48
       ]
     ],
-    "sma50": 22.364800186157225,
-    "sma200": 18.14940004825592,
+    "sma50": 22.427400169372557,
+    "sma200": 18.15940004825592,
     "high52w": 40.720001220703125,
     "low52w": 13.470000267028809,
     "signal": "NEUTRAL",
-    "commentary": "VIX at 19.49 \u25ac. Moderate concern; market in transition.",
-    "momentum": null
+    "commentary": "VIX at 19.48 \u25ac. Moderate concern; market in transition.",
+    "momentum": "DECEL"
   },
   "OIL_WTI": {
     "label": "WTI Crude Oil",
-    "value": 98.37000274658203,
-    "previous": 98.37000274658203,
+    "value": 98.58000183105469,
+    "previous": 98.58000183105469,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
@@ -15487,21 +15487,21 @@
       ],
       [
         "2026-04-10",
-        98.37
+        98.58
       ]
     ],
-    "sma50": 81.72359985351562,
-    "sma200": 66.82919984817505,
+    "sma50": 81.72779983520508,
+    "sma200": 66.83024984359741,
     "high52w": 112.94999694824219,
     "low52w": 55.27000045776367,
     "signal": "BEARISH",
-    "commentary": "WTI at $98.37 \u25ac. Elevated \u2014 headwind for inflation and consumer spending.",
+    "commentary": "WTI at $98.58 \u25ac. Elevated \u2014 headwind for inflation and consumer spending.",
     "momentum": "DECEL"
   },
   "OIL_BRT": {
     "label": "Brent Crude",
-    "value": 96.70999908447266,
-    "previous": 96.70999908447266,
+    "value": 96.55000305175781,
+    "previous": 96.55000305175781,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
@@ -16515,21 +16515,21 @@
       ],
       [
         "2026-04-10",
-        96.71
+        96.55
       ]
     ],
-    "sma50": 87.3586003112793,
-    "sma200": 70.96179983139038,
+    "sma50": 87.355400390625,
+    "sma200": 70.9609998512268,
     "high52w": 118.3499984741211,
     "low52w": 58.91999816894531,
     "signal": "BEARISH",
-    "commentary": "Brent at $96.71 \u25ac. Global crude benchmark tracking geopolitical risk.",
+    "commentary": "Brent at $96.55 \u25ac. Global crude benchmark tracking geopolitical risk.",
     "momentum": "DECEL"
   },
   "GOLD": {
     "label": "Gold",
-    "value": 4783.7998046875,
-    "previous": 4783.7998046875,
+    "value": 4776.39990234375,
+    "previous": 4776.39990234375,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
@@ -17543,22 +17543,22 @@
       ],
       [
         "2026-04-10",
-        4783.8
+        4776.4
       ]
     ],
-    "sma50": 4903.133984375,
-    "sma200": 4150.42398803711,
+    "sma50": 4902.985986328125,
+    "sma200": 4150.386988525391,
     "high52w": 5318.39990234375,
     "low52w": 3155.199951171875,
-    "weekly_pct": 2.8442395934107356,
+    "weekly_pct": 2.685153226781689,
     "signal": "BULLISH",
-    "commentary": "Gold at $4,784 \u25ac (+2.8% wk). All-time high territory \u2014 persistent safe-haven demand.",
+    "commentary": "Gold at $4,776 \u25ac (+2.7% wk). All-time high territory \u2014 persistent safe-haven demand.",
     "momentum": "DECEL"
   },
   "COPPER": {
     "label": "Copper",
-    "value": 5.781499862670898,
-    "previous": 5.781499862670898,
+    "value": 5.809500217437744,
+    "previous": 5.809500217437744,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
@@ -18572,21 +18572,21 @@
       ],
       [
         "2026-04-10",
-        5.78
+        5.81
       ]
     ],
-    "sma50": 5.746669960021973,
-    "sma200": 5.2626174712181095,
+    "sma50": 5.74722996711731,
+    "sma200": 5.262757472991943,
     "high52w": 6.17549991607666,
     "low52w": 4.321000099182129,
     "signal": "BULLISH",
-    "commentary": "Copper at $5.781 \u25ac. Above $4 \u2014 strong global growth signal.",
-    "momentum": "DECEL"
+    "commentary": "Copper at $5.810 \u25ac. Above $4 \u2014 strong global growth signal.",
+    "momentum": null
   },
   "DXY": {
     "label": "DXY (Dollar Index)",
-    "value": 98.90299987792969,
-    "previous": 98.90299987792969,
+    "value": 98.79100036621094,
+    "previous": 98.79100036621094,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
@@ -19600,15 +19600,15 @@
       ],
       [
         "2026-04-10",
-        98.9
+        98.79
       ]
     ],
-    "sma50": 98.59365997314453,
-    "sma200": 98.47471515655518,
+    "sma50": 98.59141998291015,
+    "sma200": 98.47415515899658,
     "high52w": 101.79000091552734,
     "low52w": 96.22000122070312,
     "signal": "BULLISH",
-    "commentary": "DXY at 98.90 \u25ac. Weak dollar \u2014 supports commodities and overseas earnings.",
+    "commentary": "DXY at 98.79 \u25ac. Weak dollar \u2014 supports commodities and overseas earnings.",
     "momentum": "DECEL"
   },
   "PUT_CALL": {
@@ -19627,14 +19627,14 @@
     "commentary": "Data unavailable \u2014 using last known value.",
     "momentum": null
   },
-  "_daily_brief": "Risk-on sentiment with 14 bullish signals. Biggest mover: Initial Jobless Claims, up 16K to 219K. Initial claims at 219K \u25b2. Oil above $98 is feeding inflation expectations \u2014 stagflation risk elevated. Key catalyst: CPI (Mar) due today.",
-  "_weekly_wrap": "This week: 12 indicators improved, 12 deteriorated, 3 unchanged. Nonfarm Payrolls (MoM) moved most, up 318K to +178K. VIX also notable, down 20.6% to 19.49. Overall macro regime unchanged week-over-week. The week was defined by persistent oil-driven inflation pressure. Next week: Retail Sales (Mar) (16 Apr). These could shift the consumption picture.",
+  "_daily_brief": "Risk-on sentiment with 14 bullish signals. Biggest mover: Initial Jobless Claims, up 16K to 219K. Initial claims at 219K \u25b2. Oil above $99 is feeding inflation expectations \u2014 stagflation risk elevated. Key catalyst: CPI (Mar) due today.",
+  "_weekly_wrap": "This week: 12 indicators improved, 12 deteriorated, 3 unchanged. Nonfarm Payrolls (MoM) moved most, up 318K to +178K. VIX also notable, down 18.4% to 19.48. Overall macro regime unchanged week-over-week. The week was defined by persistent oil-driven inflation pressure. Next week: Retail Sales (Mar) (16 Apr). These could shift the consumption picture.",
   "_forward_look": [
     {
       "title": "Oil shock persistence",
       "probability": "HIGH",
       "prob_color": "#ff4d4d",
-      "text": "If oil holds above $98 through month-end, expect next CPI to print 2.6\u20132.8% \u2014 above consensus. This would push rate cut expectations to zero for H1 2026 and pressure equities toward 6,483 support.",
+      "text": "If oil holds above $99 through month-end, expect next CPI to print 2.6\u20132.8% \u2014 above consensus. This would push rate cut expectations to zero for H1 2026 and pressure equities toward 6,483 support.",
       "impacts": [
         [
           "S&P",
@@ -19731,6 +19731,6 @@
     }
   ],
   "_meta": {
-    "last_updated": "2026-04-10 05:29 UTC"
+    "last_updated": "2026-04-10 10:32 UTC"
   }
 }
