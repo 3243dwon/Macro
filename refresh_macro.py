@@ -3905,22 +3905,22 @@ def generate_html(indicators: dict, timestamp: str, *,
 
   function reloadDashboard(btn) {{
     btn.classList.add('spinning');
-    btn.innerHTML = '<span class="reload-spinner"></span> Refreshing data...';
+    btn.innerHTML = '<span class="reload-spinner"></span> Refreshing...';
+    // Try local Flask server first (dev mode)
     fetch('/refresh', {{ method: 'POST' }})
       .then(r => r.json())
       .then(d => {{
-        if (d.status === 'ok') {{
-          location.reload();
-        }} else {{
-          throw new Error(d.message || 'Refresh failed');
-        }}
+        if (d.status === 'ok') {{ location.reload(); }}
+        else {{ throw new Error('local'); }}
       }})
       .catch(() => {{
-        // Server not running — fallback to simple page reload
-        showToast('Server not running — showing cached data. Run: python3 serve.py');
-        btn.innerHTML = '<span class="reload-icon">&#8635;</span> Reload';
-        btn.classList.remove('spinning');
-        setTimeout(() => location.reload(), 2000);
+        // Not on local server — just hard-reload from the deployed site
+        // Clear SW cache so we get the freshest version
+        if ('caches' in window) {{
+          caches.keys().then(names => names.forEach(n => caches.delete(n)));
+        }}
+        showToast('Reloading latest data...');
+        setTimeout(() => location.reload(true), 500);
       }});
   }}
 
