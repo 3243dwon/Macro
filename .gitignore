@@ -34,8 +34,8 @@ yarn-error.log*
 .env*
 !.env.example
 
-# cached data
-/data/indicators.json
+# cached data (tracked for CI fallback)
+# /data/indicators.json
 
 # vercel
 .vercel
