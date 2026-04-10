@@ -1,0 +1,54 @@
+name: Refresh Macro Dashboard
+
+on:
+  schedule:
+    - cron: "30 9 * * *"       # Daily at 9:30 AM UTC
+    - cron: "30 13 * * 1-5"    # Weekdays at 1:30 PM UTC (after US market open)
+    - cron: "0 21 * * 1-5"     # Weekdays at 9:00 PM UTC (after US market close)
+  workflow_dispatch:             # Manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run refresh_macro.py
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python refresh_macro.py
+
+      - name: Copy PWA assets into output
+        run: |
+          cp static/manifest.json output/manifest.json
+          cp static/sw.js output/sw.js
+          cp static/icon-192.png output/icon-192.png
+          cp static/icon-512.png output/icon-512.png
+
+      - name: Commit updated data back to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/indicators.json
+          git diff --cached --quiet || git commit -m "Auto-refresh data $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          publish_branch: gh-pages
