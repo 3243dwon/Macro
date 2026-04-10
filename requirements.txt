@@ -1,0 +1,4 @@
+fredapi
+yfinance
+openpyxl
+requests
