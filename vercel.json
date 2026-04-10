@@ -1,8 +1,14 @@
 {
-  "crons": [
+  "buildCommand": "",
+  "outputDirectory": "output",
+  "framework": null,
+  "headers": [
     {
-      "path": "/api/cron/refresh",
-      "schedule": "0 */4 * * *"
+      "source": "/sw.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache" },
+        { "key": "Service-Worker-Allowed", "value": "/" }
+      ]
     }
   ]
 }
