@@ -46,7 +46,7 @@ DATA_DIR       = "data"
 OUTPUT_DIR     = "output"
 INDICATORS_FILE = "data/indicators.json"
 RULES_FILE      = "data/rules.json"
-HTML_OUTPUT     = "output/macro_dashboard.html"
+HTML_OUTPUT     = "output/index.html"
 EXCEL_OUTPUT    = "output/macro_pulse.xlsx"
 
 # ── History: how many FRED data points to look back for YoY / MoM ────────────

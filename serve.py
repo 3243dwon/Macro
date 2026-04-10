@@ -27,11 +27,20 @@ app = Flask(__name__)
 
 def _sync_pwa_assets():
     """Copy PWA assets from static/ into output/ so relative paths work."""
-    for fname in ("manifest.json", "sw.js", "icon-192.png", "icon-512.png"):
+    for fname in ("manifest.json", "icon-192.png", "icon-512.png"):
         src = os.path.join(STATIC_DIR, fname)
         dst = os.path.join(OUTPUT_DIR, fname)
         if os.path.exists(src):
             shutil.copy2(src, dst)
+    # Stamp sw.js with current timestamp so the browser detects updates
+    sw_src = os.path.join(STATIC_DIR, "sw.js")
+    sw_dst = os.path.join(OUTPUT_DIR, "sw.js")
+    if os.path.exists(sw_src):
+        ts = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
+        with open(sw_src, "r") as f:
+            content = f.read().replace("__BUILD_TS__", ts)
+        with open(sw_dst, "w") as f:
+            f.write(content)
 
 
 @app.route("/")

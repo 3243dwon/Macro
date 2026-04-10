@@ -31,10 +31,11 @@ jobs:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python refresh_macro.py
 
-      - name: Copy PWA assets into output
+      - name: Copy PWA assets into output with build timestamp
         run: |
+          BUILD_TS=$(date -u '+%Y%m%d%H%M%S')
+          sed "s/__BUILD_TS__/$BUILD_TS/" static/sw.js > output/sw.js
           cp static/manifest.json output/manifest.json
-          cp static/sw.js output/sw.js
           cp static/icon-192.png output/icon-192.png
           cp static/icon-512.png output/icon-512.png
 
