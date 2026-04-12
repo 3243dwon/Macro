@@ -8,13 +8,9 @@
     "unit": "%",
     "source": "FRED",
     "category": "Rates & Monetary Policy",
-    "value_date": "2026-04-10",
-    "previous_date": "2026-04-09",
+    "value_date": "2026-04-11",
+    "previous_date": "2026-04-10",
     "history": [
-      [
-        "2025-04-10",
-        4.5
-      ],
       [
         "2025-04-11",
         4.5
@@ -1473,6 +1469,10 @@
       ],
       [
         "2026-04-10",
+        3.75
+      ],
+      [
+        "2026-04-11",
         3.75
       ]
     ],
@@ -14482,10 +14482,6 @@
     "previous_date": "2026-04-09",
     "history": [
       [
-        "2025-04-11",
-        61.5
-      ],
-      [
         "2025-04-14",
         61.53
       ],
@@ -15506,10 +15502,6 @@
     "previous_date": "2026-04-09",
     "history": [
       [
-        "2025-04-11",
-        64.76
-      ],
-      [
         "2025-04-14",
         64.88
       ],
@@ -16520,8 +16512,8 @@
   },
   "GOLD": {
     "label": "Gold",
-    "value": 4761.89990234375,
-    "previous": 4761.89990234375,
+    "value": 4787.39990234375,
+    "previous": 4787.39990234375,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
@@ -16529,10 +16521,6 @@
     "value_date": "2026-04-10",
     "previous_date": "2026-04-09",
     "history": [
-      [
-        "2025-04-11",
-        3222.2
-      ],
       [
         "2025-04-14",
         3204.8
@@ -17531,22 +17519,22 @@
       ],
       [
         "2026-04-10",
-        4761.9
+        4787.4
       ]
     ],
-    "sma50": 4902.695986328125,
-    "sma200": 4150.3144885253905,
+    "sma50": 4903.205986328125,
+    "sma200": 4150.441988525391,
     "high52w": 5318.39990234375,
     "low52w": 3181.39990234375,
-    "weekly_pct": 2.3734258270181607,
+    "weekly_pct": 2.9216360817746923,
     "signal": "BULLISH",
-    "commentary": "Gold at $4,762 \u25ac (+2.4% wk). All-time high territory \u2014 persistent safe-haven demand.",
-    "momentum": null
+    "commentary": "Gold at $4,787 \u25ac (+2.9% wk). All-time high territory \u2014 persistent safe-haven demand.",
+    "momentum": "DECEL"
   },
   "COPPER": {
     "label": "Copper",
-    "value": 5.870500087738037,
-    "previous": 5.870500087738037,
+    "value": 5.886000156402588,
+    "previous": 5.886000156402588,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
@@ -17554,10 +17542,6 @@
     "value_date": "2026-04-10",
     "previous_date": "2026-04-09",
     "history": [
-      [
-        "2025-04-11",
-        4.51
-      ],
       [
         "2025-04-14",
         4.61
@@ -18556,20 +18540,20 @@
       ],
       [
         "2026-04-10",
-        5.87
+        5.89
       ]
     ],
-    "sma50": 5.748449964523315,
-    "sma200": 5.263062472343445,
+    "sma50": 5.748759965896607,
+    "sma200": 5.263139972686767,
     "high52w": 6.17549991607666,
     "low52w": 4.33050012588501,
     "signal": "BULLISH",
-    "commentary": "Copper at $5.871 \u25ac. Above $4 \u2014 strong global growth signal.",
+    "commentary": "Copper at $5.886 \u25ac. Above $4 \u2014 strong global growth signal.",
     "momentum": "ACCEL"
   },
   "DXY": {
     "label": "DXY (Dollar Index)",
-    "value": 98.6500015258789,
+    "value": 98.698,
     "previous": 98.6500015258789,
     "direction": "\u25ac",
     "unit": "",
@@ -18578,10 +18562,6 @@
     "value_date": "2026-04-10",
     "previous_date": "2026-04-09",
     "history": [
-      [
-        "2025-04-11",
-        99.78
-      ],
       [
         "2025-04-14",
         99.64
@@ -19588,7 +19568,7 @@
     "high52w": 101.79000091552734,
     "low52w": 96.22000122070312,
     "signal": "BULLISH",
-    "commentary": "DXY at 98.65 \u25ac. Weak dollar \u2014 supports commodities and overseas earnings.",
+    "commentary": "DXY at 98.70 \u25ac. Weak dollar \u2014 supports commodities and overseas earnings.",
     "momentum": null
   },
   "PUT_CALL": {
@@ -19711,6 +19691,6 @@
     }
   ],
   "_meta": {
-    "last_updated": "2026-04-11 10:02 UTC"
+    "last_updated": "2026-04-12 10:04 UTC"
   }
 }
