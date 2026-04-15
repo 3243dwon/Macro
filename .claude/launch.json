@@ -6,12 +6,6 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["serve.py"],
       "port": 8050
-    },
-    {
-      "name": "Next.js Dev",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
-      "port": 3000
     }
   ]
 }
