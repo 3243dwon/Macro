@@ -34,16 +34,16 @@ jobs:
         run: python refresh_macro.py
 
       - name: Check for signal flips and alert via Feishu
+        continue-on-error: true
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
         run: |
-          if python check_signal_flips.py data/indicators_old.json data/indicators.json; then
-            if [ -n "$FEISHU_WEBHOOK" ] && [ -f /tmp/signal_alert.json ]; then
-              curl -s -X POST "$FEISHU_WEBHOOK" \
-                -H "Content-Type: application/json" \
-                -d @/tmp/signal_alert.json
-              echo "  ✅ Feishu alert sent"
-            fi
+          python check_signal_flips.py data/indicators_old.json data/indicators.json || true
+          if [ -f /tmp/signal_alert.json ] && [ -n "$FEISHU_WEBHOOK" ]; then
+            curl -s -X POST "$FEISHU_WEBHOOK" \
+              -H "Content-Type: application/json" \
+              -d @/tmp/signal_alert.json
+            echo "  ✅ Feishu alert sent"
           else
             echo "  ✅ No signal flips"
           fi
