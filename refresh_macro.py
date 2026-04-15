@@ -2892,28 +2892,24 @@ def generate_html(indicators: dict, timestamp: str, *,
     }}
     .edit-btn:hover {{ background: var(--accent); color: var(--bg); }}
     .edit-btn.active {{ background: var(--accent); color: var(--bg); }}
-    .reload-btn {{
-      padding: 6px 18px;
-      border-radius: 6px;
-      border: 1px solid var(--accent);
-      background: transparent;
-      color: var(--accent);
+    .next-update {{
+      font-size: 0.7rem;
+      color: var(--muted);
       font-family: var(--font-ui);
-      font-size: 0.8rem;
-      cursor: pointer;
-      transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1px;
     }}
-    .reload-btn:hover {{ background: var(--accent); color: var(--bg); }}
-    .reload-btn .reload-icon {{
-      display: inline-block;
-      transition: transform 0.2s;
+    .next-update .next-label {{
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.6rem;
     }}
-    .reload-btn.spinning .reload-icon {{
-      animation: spin 1s linear;
-    }}
-    @keyframes spin {{
-      from {{ transform: rotate(0deg); }}
-      to {{ transform: rotate(360deg); }}
+    .next-update .next-time {{
+      color: var(--accent);
+      font-family: var(--font-data);
+      font-size: 0.75rem;
     }}
     .reload-spinner {{
       display: inline-block;
@@ -3808,7 +3804,7 @@ def generate_html(indicators: dict, timestamp: str, *,
       .narrative-text {{ font-size: 0.78rem; }}
       .daily-brief-text {{ font-size: 0.75rem; }}
 
-      .edit-btn, .reload-btn {{ padding: 5px 12px; font-size: 0.75rem; }}
+      .edit-btn {{ padding: 5px 12px; font-size: 0.75rem; }}
       .logo {{ font-size: 0.95rem; }}
       .timestamp {{ font-size: 0.65rem; }}
       .stat-val {{ font-size: 0.82rem; }}
@@ -3875,7 +3871,7 @@ def generate_html(indicators: dict, timestamp: str, *,
   <div class="topbar-right">
     <span class="timestamp">Data as of: {timestamp}</span>
     <span class="topbar-sep"></span>
-    <button class="reload-btn" onclick="reloadDashboard(this)"><span class="reload-icon">&#8635;</span> Reload</button>
+    <span class="next-update" id="nextUpdate"></span>
     <button class="edit-btn" onclick="toggleEditMode(this)">&#9998; Edit Mode</button>
   </div>
 </header>
@@ -3903,26 +3899,33 @@ def generate_html(indicators: dict, timestamp: str, *,
   const MACRO_MAP_EDGES = {map_edges_json};
   const REGIME_TIMELINE = {timeline_json};
 
-  function reloadDashboard(btn) {{
-    btn.classList.add('spinning');
-    btn.innerHTML = '<span class="reload-spinner"></span> Refreshing...';
-    // Try local Flask server first (dev mode)
-    fetch('/refresh', {{ method: 'POST' }})
-      .then(r => r.json())
-      .then(d => {{
-        if (d.status === 'ok') {{ location.reload(); }}
-        else {{ throw new Error('local'); }}
-      }})
-      .catch(() => {{
-        // Not on local server — just hard-reload from the deployed site
-        // Clear SW cache so we get the freshest version
-        if ('caches' in window) {{
-          caches.keys().then(names => names.forEach(n => caches.delete(n)));
-        }}
-        showToast('Reloading latest data...');
-        setTimeout(() => location.reload(true), 500);
-      }});
+  // Auto-refresh schedule (UTC): 13:00 (pre-market) and 21:30 (post-close)
+  function updateNextRefresh() {{
+    const el = document.getElementById('nextUpdate');
+    if (!el) return;
+    const now = new Date();
+    const utcH = now.getUTCHours(), utcM = now.getUTCMinutes();
+    const mins = utcH * 60 + utcM;
+    // Schedule: 13:00 UTC and 21:30 UTC
+    const slots = [13 * 60, 21 * 60 + 30];
+    let nextMins = slots.find(s => s > mins);
+    let label;
+    if (nextMins !== undefined) {{
+      const diff = nextMins - mins;
+      const h = Math.floor(diff / 60);
+      const m = diff % 60;
+      label = h > 0 ? h + 'h ' + m + 'm' : m + 'm';
+    }} else {{
+      // Next is tomorrow morning
+      const diff = (24 * 60 - mins) + slots[0];
+      const h = Math.floor(diff / 60);
+      const m = diff % 60;
+      label = h + 'h ' + m + 'm';
+    }}
+    el.innerHTML = '<span class="next-label">Next update</span><span class="next-time">' + label + '</span>';
   }}
+  updateNextRefresh();
+  setInterval(updateNextRefresh, 60000);
 
   function showToast(msg) {{
     const t = document.createElement('div');
