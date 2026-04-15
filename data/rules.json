@@ -92,6 +92,18 @@
     "hike_bearish": true,
     "hold_neutral": true
   },
+  "BTC": {
+    "sma_short_days": 50,
+    "sma_long_days": 200,
+    "bearish_below_sma200": true,
+    "bullish_above_sma50": true
+  },
+  "ETH": {
+    "sma_short_days": 50,
+    "sma_long_days": 200,
+    "bearish_below_sma200": true,
+    "bullish_above_sma50": true
+  },
   "PUT_CALL": {
     "bearish_above": 1.0,
     "contrarian_bullish_above": 1.2,

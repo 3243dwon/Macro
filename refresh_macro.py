@@ -480,6 +480,8 @@ def fetch_yfinance_data(previous_data: dict) -> dict:
             "GOLD":    "Prices & Inflation",
             "COPPER":  "Prices & Inflation",
             "DXY":     "Market Sentiment",
+            "BTC":     "Crypto",
+            "ETH":     "Crypto",
         }
         label_map = {
             "SP500":   "S&P 500",
@@ -493,6 +495,8 @@ def fetch_yfinance_data(previous_data: dict) -> dict:
             "GOLD":    "Gold",
             "COPPER":  "Copper",
             "DXY":     "DXY (Dollar Index)",
+            "BTC":     "Bitcoin",
+            "ETH":     "Ethereum",
         }
 
         # Build history from close series
@@ -731,6 +735,16 @@ def assign_signals(indicators: dict, rules: dict) -> dict:
                 return "BULLISH"   # cut
             if v > prev + 0.01:
                 return "BEARISH"   # hike
+            return "NEUTRAL"
+
+        # ── Crypto (SMA-based, same as equities) ─────────────────────────────
+        if key in ("BTC", "ETH"):
+            sma200 = ind.get("sma200")
+            sma50  = ind.get("sma50")
+            if sma200 and v < sma200:
+                return "BEARISH"
+            if sma50 and v > sma50:
+                return "BULLISH"
             return "NEUTRAL"
 
         # ── Put/Call ──────────────────────────────────────────────────────────
@@ -1242,6 +1256,7 @@ SECTION_ORDER = [
     "Prices & Inflation",
     "Market Sentiment",
     "Market Indices",
+    "Crypto",
 ]
 
 SECTION_ICONS = {
@@ -1250,6 +1265,7 @@ SECTION_ICONS = {
     "Prices & Inflation":      "📈",
     "Market Sentiment":        "😰",
     "Market Indices":          "💹",
+    "Crypto":                  "🪙",
 }
 
 def value_display(key: str, ind: dict) -> str:
@@ -2725,10 +2741,14 @@ def generate_html(indicators: dict, timestamp: str, *,
           </div>
         </div>"""
 
+        section_id = section.replace(" ", "-").replace("&", "").lower()
         sections_html += f"""
-      <section class="section">
-        <h2 class="section-title">{icon} {section}</h2>
-        <div class="cards-grid">{cards}
+      <section class="section" id="sec-{section_id}">
+        <h2 class="section-title" onclick="toggleSection(this)">
+          <span>{icon} {section}</span>
+          <span class="section-chevron">▼</span>
+        </h2>
+        <div class="cards-grid section-body">{cards}
         </div>
       </section>"""
         # Insert scenarios right after Market Indices section
@@ -2968,6 +2988,22 @@ def generate_html(indicators: dict, timestamp: str, *,
       margin-bottom: 16px;
       padding-bottom: 8px;
       border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      -webkit-user-select: none;
+      user-select: none;
+    }}
+    .section-chevron {{
+      font-size: 0.7rem;
+      transition: transform 0.2s;
+    }}
+    .section-title.collapsed .section-chevron {{
+      transform: rotate(-90deg);
+    }}
+    .section-body.collapsed {{
+      display: none;
     }}
 
     /* ── CARDS ──────────────────────────────────── */
@@ -4139,6 +4175,12 @@ def generate_html(indicators: dict, timestamp: str, *,
   }}
 
   // ── Edit mode ────────────────────────────────────────────────────────────
+  function toggleSection(titleEl) {{
+    titleEl.classList.toggle('collapsed');
+    const body = titleEl.nextElementSibling;
+    if (body) body.classList.toggle('collapsed');
+  }}
+
   function toggleEditMode(btn) {{
     document.body.classList.toggle('edit-mode');
     const isEdit = document.body.classList.contains('edit-mode');

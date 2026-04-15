@@ -39,6 +39,8 @@ YFINANCE_TICKERS = {
     "GOLD":    "GC=F",
     "COPPER":  "HG=F",
     "DXY":     "DX-Y.NYB",
+    "BTC":     "BTC-USD",
+    "ETH":     "ETH-USD",
 }
 
 # ── File paths ────────────────────────────────────────────────────────────────

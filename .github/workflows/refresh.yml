@@ -25,10 +25,28 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Save old indicators for signal comparison
+        run: cp data/indicators.json data/indicators_old.json 2>/dev/null || true
+
       - name: Run refresh_macro.py
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python refresh_macro.py
+
+      - name: Check for signal flips and alert via Feishu
+        env:
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+        run: |
+          if python check_signal_flips.py data/indicators_old.json data/indicators.json; then
+            if [ -n "$FEISHU_WEBHOOK" ] && [ -f /tmp/signal_alert.json ]; then
+              curl -s -X POST "$FEISHU_WEBHOOK" \
+                -H "Content-Type: application/json" \
+                -d @/tmp/signal_alert.json
+              echo "  ✅ Feishu alert sent"
+            fi
+          else
+            echo "  ✅ No signal flips"
+          fi
 
       - name: Copy PWA assets into output with build timestamp
         run: |
@@ -42,7 +60,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/indicators.json output/index.html output/sw.js
+          git add data/indicators.json data/rules.json output/index.html output/sw.js
           git diff --cached --quiet || git commit -m "Auto-refresh data $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push
 
