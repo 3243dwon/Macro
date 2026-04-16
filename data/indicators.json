@@ -8,13 +8,9 @@
     "unit": "%",
     "source": "FRED",
     "category": "Rates & Monetary Policy",
-    "value_date": "2026-04-15",
-    "previous_date": "2026-04-14",
+    "value_date": "2026-04-16",
+    "previous_date": "2026-04-15",
     "history": [
-      [
-        "2025-04-15",
-        4.5
-      ],
       [
         "2025-04-16",
         4.5
@@ -1473,6 +1469,10 @@
       ],
       [
         "2026-04-15",
+        3.75
+      ],
+      [
+        "2026-04-16",
         3.75
       ]
     ],
@@ -5824,20 +5824,16 @@
   },
   "INITIAL_CLAIMS": {
     "label": "Initial Jobless Claims",
-    "value": 219000.0,
-    "previous": 203000.0,
-    "direction": "\u25b2",
+    "value": 207000.0,
+    "previous": 218000.0,
+    "direction": "\u25bc",
     "unit": "K",
-    "value_str": "219K",
+    "value_str": "207K",
     "source": "FRED",
     "category": "Real Economy",
-    "value_date": "2026-04-04",
-    "previous_date": "2026-03-28",
+    "value_date": "2026-04-11",
+    "previous_date": "2026-04-04",
     "history": [
-      [
-        "2025-04-05",
-        223000.0
-      ],
       [
         "2025-04-12",
         217000.0
@@ -6044,12 +6040,16 @@
       ],
       [
         "2026-04-04",
-        219000.0
+        218000.0
+      ],
+      [
+        "2026-04-11",
+        207000.0
       ]
     ],
     "signal": "BULLISH",
-    "commentary": "Initial claims at 219K \u25b2. Sub-220K \u2014 historically tight labor market.",
-    "momentum": "ACCEL",
+    "commentary": "Initial claims at 207K \u25bc. Sub-220K \u2014 historically tight labor market.",
+    "momentum": null,
     "high52w": 259000.0,
     "low52w": 201000.0
   },
@@ -6212,19 +6212,15 @@
   },
   "IG_SPREAD": {
     "label": "IG Credit Spread",
-    "value": 81.0,
-    "previous": 82.0,
+    "value": 80.0,
+    "previous": 81.0,
     "direction": "\u25ac",
     "unit": "bps",
     "source": "FRED",
     "category": "Market Sentiment",
-    "value_date": "2026-04-14",
-    "previous_date": "2026-04-13",
+    "value_date": "2026-04-15",
+    "previous_date": "2026-04-14",
     "history": [
-      [
-        "2025-04-14",
-        115.0
-      ],
       [
         "2025-04-15",
         114.0
@@ -7276,29 +7272,29 @@
       [
         "2026-04-14",
         81.0
+      ],
+      [
+        "2026-04-15",
+        80.0
       ]
     ],
     "signal": "BULLISH",
-    "commentary": "IG spread at 81bps \u25ac. Tight \u2014 benign credit environment.",
-    "momentum": null,
-    "high52w": 115.0,
+    "commentary": "IG spread at 80bps \u25ac. Tight \u2014 benign credit environment.",
+    "momentum": "ACCEL",
+    "high52w": 114.0,
     "low52w": 73.0
   },
   "HY_SPREAD": {
     "label": "HY Credit Spread",
-    "value": 284.0,
-    "previous": 295.0,
-    "direction": "\u25bc",
+    "value": 285.0,
+    "previous": 284.0,
+    "direction": "\u25ac",
     "unit": "bps",
     "source": "FRED",
     "category": "Market Sentiment",
-    "value_date": "2026-04-14",
-    "previous_date": "2026-04-13",
+    "value_date": "2026-04-15",
+    "previous_date": "2026-04-14",
     "history": [
-      [
-        "2025-04-14",
-        414.0
-      ],
       [
         "2025-04-15",
         409.0
@@ -8350,24 +8346,28 @@
       [
         "2026-04-14",
         284.0
+      ],
+      [
+        "2026-04-15",
+        285.0
       ]
     ],
     "signal": "BULLISH",
-    "commentary": "HY spread at 284bps \u25bc. Below 300bps \u2014 compressed; complacency or strong growth.",
-    "momentum": "ACCEL",
+    "commentary": "HY spread at 285bps \u25ac. Below 300bps \u2014 compressed; complacency or strong growth.",
+    "momentum": "DECEL",
     "high52w": 416.0,
     "low52w": 264.0
   },
   "SP500": {
     "label": "S&P 500",
-    "value": 7022.9501953125,
-    "previous": 7022.9501953125,
+    "value": 7028.39013671875,
+    "previous": 7028.39013671875,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
     "category": "Market Indices",
-    "value_date": "2026-04-15",
-    "previous_date": "2026-04-14",
+    "value_date": "2026-04-16",
+    "previous_date": "2026-04-15",
     "history": [
       [
         "2025-04-16",
@@ -9368,26 +9368,30 @@
       [
         "2026-04-15",
         7022.95
+      ],
+      [
+        "2026-04-16",
+        7028.39
       ]
     ],
-    "sma50": 6761.8144140625,
-    "sma200": 6674.970642089844,
-    "high52w": 7022.9501953125,
+    "sma50": 6764.026015625,
+    "sma200": 6679.087841796875,
+    "high52w": 7028.39013671875,
     "low52w": 5158.2001953125,
     "signal": "BULLISH",
-    "commentary": "S&P 500 at 7,023 \u25ac. Above 50-day SMA (6,762) \u2014 uptrend intact.",
-    "momentum": null
+    "commentary": "S&P 500 at 7,028 \u25ac. Above 50-day SMA (6,764) \u2014 uptrend intact.",
+    "momentum": "DECEL"
   },
   "DOW": {
     "label": "Dow Jones",
-    "value": 48463.71875,
-    "previous": 48463.71875,
+    "value": 48440.23046875,
+    "previous": 48440.23046875,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
     "category": "Market Indices",
-    "value_date": "2026-04-15",
-    "previous_date": "2026-04-14",
+    "value_date": "2026-04-16",
+    "previous_date": "2026-04-15",
     "history": [
       [
         "2025-04-16",
@@ -10388,26 +10392,30 @@
       [
         "2026-04-15",
         48463.72
+      ],
+      [
+        "2026-04-16",
+        48440.23
       ]
     ],
-    "sma50": 47955.751953125,
-    "sma200": 46917.15228515625,
+    "sma50": 47939.736796875,
+    "sma200": 46938.87958984375,
     "high52w": 50188.140625,
     "low52w": 38170.41015625,
     "signal": "BULLISH",
-    "commentary": "Dow Jones at 48,464 \u25ac.",
+    "commentary": "Dow Jones at 48,440 \u25ac.",
     "momentum": "DECEL"
   },
   "NASDAQ": {
     "label": "Nasdaq Composite",
-    "value": 24016.017578125,
-    "previous": 24016.017578125,
+    "value": 24030.783203125,
+    "previous": 24030.783203125,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
     "category": "Market Indices",
-    "value_date": "2026-04-15",
-    "previous_date": "2026-04-14",
+    "value_date": "2026-04-16",
+    "previous_date": "2026-04-15",
     "history": [
       [
         "2025-04-16",
@@ -11408,31 +11416,31 @@
       [
         "2026-04-15",
         24016.02
+      ],
+      [
+        "2026-04-16",
+        24030.78
       ]
     ],
-    "sma50": 22503.3544140625,
-    "sma200": 22463.24654296875,
-    "high52w": 24016.017578125,
+    "sma50": 22518.866328125,
+    "sma200": 22481.55181640625,
+    "high52w": 24030.783203125,
     "low52w": 15870.900390625,
     "signal": "BULLISH",
-    "commentary": "Nasdaq at 24,016 \u25ac. Tech complex tracking broader risk tone.",
-    "momentum": "ACCEL"
+    "commentary": "Nasdaq at 24,031 \u25ac. Tech complex tracking broader risk tone.",
+    "momentum": "DECEL"
   },
   "FTSE100": {
     "label": "FTSE 100",
-    "value": 10559.580078125,
-    "previous": 10559.580078125,
+    "value": 10589.240234375,
+    "previous": 10589.240234375,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
     "category": "Market Indices",
-    "value_date": "2026-04-15",
-    "previous_date": "2026-04-14",
+    "value_date": "2026-04-16",
+    "previous_date": "2026-04-15",
     "history": [
-      [
-        "2025-04-15",
-        8249.1
-      ],
       [
         "2025-04-16",
         8275.6
@@ -12435,32 +12443,32 @@
       ],
       [
         "2026-04-15",
-        10559.58
+        10559.6
+      ],
+      [
+        "2026-04-16",
+        10589.24
       ]
     ],
-    "sma50": 10409.229609375,
-    "sma200": 9729.86140625,
+    "sma50": 10414.7228125,
+    "sma200": 9738.934204101562,
     "high52w": 10910.599609375,
-    "low52w": 8249.099609375,
+    "low52w": 8275.599609375,
     "signal": "BULLISH",
-    "commentary": "FTSE 100 at 10,560 \u25ac. UK equities reflecting global risk sentiment.",
-    "momentum": "ACCEL"
+    "commentary": "FTSE 100 at 10,589 \u25ac. UK equities reflecting global risk sentiment.",
+    "momentum": null
   },
   "NIKKEI": {
     "label": "Nikkei 225",
-    "value": 58134.24,
-    "previous": 57877.390625,
+    "value": 59518.34,
+    "previous": 58134.23828125,
     "direction": "\u25b2",
     "unit": "",
     "source": "yfinance",
     "category": "Market Indices",
-    "value_date": "2026-04-14",
-    "previous_date": "2026-04-13",
+    "value_date": "2026-04-15",
+    "previous_date": "2026-04-14",
     "history": [
-      [
-        "2025-04-15",
-        34267.54
-      ],
       [
         "2025-04-16",
         33920.4
@@ -13432,31 +13440,31 @@
       [
         "2026-04-14",
         57877.39
+      ],
+      [
+        "2026-04-15",
+        58134.24
       ]
     ],
-    "sma50": 55058.376171875,
-    "sma200": 48542.3825,
+    "sma50": 55154.60390625,
+    "sma200": 48640.6119921875,
     "high52w": 58850.26953125,
     "low52w": 33920.3984375,
     "signal": "BULLISH",
-    "commentary": "Nikkei at 58,134 \u25b2. JPY dynamics and global tech flows key drivers.",
-    "momentum": null
+    "commentary": "Nikkei at 59,518 \u25b2. JPY dynamics and global tech flows key drivers.",
+    "momentum": "DECEL"
   },
   "VIX": {
     "label": "VIX",
-    "value": 18.170000076293945,
-    "previous": 18.170000076293945,
+    "value": 18.84000015258789,
+    "previous": 18.84000015258789,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
     "category": "Market Sentiment",
-    "value_date": "2026-04-15",
-    "previous_date": "2026-04-14",
+    "value_date": "2026-04-16",
+    "previous_date": "2026-04-15",
     "history": [
-      [
-        "2025-04-15",
-        30.12
-      ],
       [
         "2025-04-16",
         32.64
@@ -14456,31 +14464,31 @@
       [
         "2026-04-15",
         18.17
+      ],
+      [
+        "2026-04-16",
+        18.84
       ]
     ],
-    "sma50": 22.522200202941896,
-    "sma200": 18.188050055503844,
+    "sma50": 22.539000205993652,
+    "sma200": 18.198600058555602,
     "high52w": 33.81999969482422,
     "low52w": 13.470000267028809,
     "signal": "NEUTRAL",
-    "commentary": "VIX at 18.17 \u25ac. Moderate concern; market in transition.",
-    "momentum": "DECEL"
+    "commentary": "VIX at 18.84 \u25ac. Moderate concern; market in transition.",
+    "momentum": "ACCEL"
   },
   "OIL_WTI": {
     "label": "WTI Crude Oil",
-    "value": 91.38999938964844,
-    "previous": 91.38999938964844,
+    "value": 90.31999969482422,
+    "previous": 90.31999969482422,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
     "category": "Prices & Inflation",
-    "value_date": "2026-04-15",
-    "previous_date": "2026-04-14",
+    "value_date": "2026-04-16",
+    "previous_date": "2026-04-15",
     "history": [
-      [
-        "2025-04-15",
-        61.33
-      ],
       [
         "2025-04-16",
         62.47
@@ -15483,32 +15491,32 @@
       ],
       [
         "2026-04-15",
-        91.39
+        91.29
+      ],
+      [
+        "2026-04-16",
+        90.32
       ]
     ],
-    "sma50": 83.46719985961914,
-    "sma200": 67.24959985733032,
+    "sma50": 84.00739990234375,
+    "sma200": 67.37344987869263,
     "high52w": 112.94999694824219,
     "low52w": 55.27000045776367,
     "signal": "BEARISH",
-    "commentary": "WTI at $91.39 \u25ac. Elevated \u2014 headwind for inflation and consumer spending.",
+    "commentary": "WTI at $90.32 \u25ac. Elevated \u2014 headwind for inflation and consumer spending.",
     "momentum": "DECEL"
   },
   "OIL_BRT": {
     "label": "Brent Crude",
-    "value": 94.93000030517578,
-    "previous": 94.93000030517578,
+    "value": 97.9800033569336,
+    "previous": 97.9800033569336,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
     "category": "Prices & Inflation",
-    "value_date": "2026-04-15",
-    "previous_date": "2026-04-14",
+    "value_date": "2026-04-16",
+    "previous_date": "2026-04-15",
     "history": [
-      [
-        "2025-04-15",
-        64.67
-      ],
       [
         "2025-04-16",
         65.85
@@ -16512,31 +16520,31 @@
       [
         "2026-04-15",
         94.93
+      ],
+      [
+        "2026-04-16",
+        97.98
       ]
     ],
-    "sma50": 88.95600021362304,
-    "sma200": 71.38409982681274,
+    "sma50": 89.56900024414062,
+    "sma200": 71.53844984054565,
     "high52w": 118.3499984741211,
     "low52w": 58.91999816894531,
-    "signal": "NEUTRAL",
-    "commentary": "Brent at $94.93 \u25ac. Global crude benchmark tracking geopolitical risk.",
-    "momentum": "DECEL"
+    "signal": "BEARISH",
+    "commentary": "Brent at $97.98 \u25ac. Global crude benchmark tracking geopolitical risk.",
+    "momentum": null
   },
   "GOLD": {
     "label": "Gold",
-    "value": 4813.89990234375,
-    "previous": 4813.89990234375,
+    "value": 4812.10009765625,
+    "previous": 4812.10009765625,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
     "category": "Prices & Inflation",
-    "value_date": "2026-04-15",
-    "previous_date": "2026-04-14",
+    "value_date": "2026-04-16",
+    "previous_date": "2026-04-15",
     "history": [
-      [
-        "2025-04-15",
-        3218.7
-      ],
       [
         "2025-04-16",
         3326.6
@@ -17539,33 +17547,33 @@
       ],
       [
         "2026-04-15",
-        4813.9
+        4800.0
+      ],
+      [
+        "2026-04-16",
+        4812.1
       ]
     ],
-    "sma50": 4897.225986328125,
-    "sma200": 4172.71298828125,
+    "sma50": 4895.115986328125,
+    "sma200": 4180.020489501953,
     "high52w": 5318.39990234375,
     "low52w": 3181.39990234375,
-    "weekly_pct": 1.3559301472523488,
+    "weekly_pct": 0.41525607305001877,
     "signal": "NEUTRAL",
-    "commentary": "Gold at $4,814 \u25ac (+1.4% wk). All-time high territory \u2014 persistent safe-haven demand.",
+    "commentary": "Gold at $4,812 \u25ac (+0.4% wk). All-time high territory \u2014 persistent safe-haven demand.",
     "momentum": "DECEL"
   },
   "COPPER": {
     "label": "Copper",
-    "value": 6.078499794006348,
-    "previous": 6.078499794006348,
+    "value": 6.068999767303467,
+    "previous": 6.068999767303467,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
     "category": "Prices & Inflation",
-    "value_date": "2026-04-15",
-    "previous_date": "2026-04-14",
+    "value_date": "2026-04-16",
+    "previous_date": "2026-04-15",
     "history": [
-      [
-        "2025-04-15",
-        4.61
-      ],
       [
         "2025-04-16",
         4.67
@@ -18568,32 +18576,32 @@
       ],
       [
         "2026-04-15",
-        6.08
+        6.07
+      ],
+      [
+        "2026-04-16",
+        6.07
       ]
     ],
     "sma50": 5.75346996307373,
-    "sma200": 5.277867469787598,
+    "sma200": 5.282939970493317,
     "high52w": 6.17549991607666,
     "low52w": 4.33050012588501,
     "signal": "BULLISH",
-    "commentary": "Copper at $6.078 \u25ac. Above $4 \u2014 strong global growth signal.",
+    "commentary": "Copper at $6.069 \u25ac. Above $4 \u2014 strong global growth signal.",
     "momentum": "DECEL"
   },
   "DXY": {
     "label": "DXY (Dollar Index)",
-    "value": 98.08200073242188,
-    "previous": 98.08200073242188,
+    "value": 98.25499725341797,
+    "previous": 98.25499725341797,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
     "category": "Market Sentiment",
-    "value_date": "2026-04-15",
-    "previous_date": "2026-04-14",
+    "value_date": "2026-04-16",
+    "previous_date": "2026-04-15",
     "history": [
-      [
-        "2025-04-15",
-        100.22
-      ],
       [
         "2025-04-16",
         99.38
@@ -19596,32 +19604,32 @@
       ],
       [
         "2026-04-15",
-        98.08
+        98.06
+      ],
+      [
+        "2026-04-16",
+        98.25
       ]
     ],
-    "sma50": 98.66244018554687,
-    "sma200": 98.48516017913818,
+    "sma50": 98.67830001831055,
+    "sma200": 98.49192516326904,
     "high52w": 101.79000091552734,
     "low52w": 96.22000122070312,
     "signal": "BULLISH",
-    "commentary": "DXY at 98.08 \u25ac. Weak dollar \u2014 supports commodities and overseas earnings.",
-    "momentum": "DECEL"
+    "commentary": "DXY at 98.25 \u25ac. Weak dollar \u2014 supports commodities and overseas earnings.",
+    "momentum": null
   },
   "BTC": {
     "label": "Bitcoin",
-    "value": 75015.71875,
-    "previous": 75015.71875,
+    "value": 74019.4296875,
+    "previous": 74019.4296875,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
     "category": "Crypto",
-    "value_date": "2026-04-15",
-    "previous_date": "2026-04-14",
+    "value_date": "2026-04-16",
+    "previous_date": "2026-04-15",
     "history": [
-      [
-        "2025-04-15",
-        83668.99
-      ],
       [
         "2025-04-16",
         84033.87
@@ -21080,32 +21088,32 @@
       ],
       [
         "2026-04-15",
-        75015.72
+        74805.08
+      ],
+      [
+        "2026-04-16",
+        74019.43
       ]
     ],
-    "sma50": 69689.08921875,
-    "sma200": 87348.42388671875,
+    "sma50": 69806.0625,
+    "sma200": 87156.85462890625,
     "high52w": 124752.53125,
     "low52w": 62702.09765625,
     "signal": "BEARISH",
-    "commentary": "Bitcoin at 75015.72 \u25ac. Signal: BEARISH.",
-    "momentum": null
+    "commentary": "Bitcoin at 74019.43 \u25ac. Signal: BEARISH.",
+    "momentum": "DECEL"
   },
   "ETH": {
     "label": "Ethereum",
-    "value": 2373.360107421875,
-    "previous": 2373.360107421875,
+    "value": 2312.919921875,
+    "previous": 2312.919921875,
     "direction": "\u25ac",
     "unit": "",
     "source": "yfinance",
     "category": "Crypto",
-    "value_date": "2026-04-15",
-    "previous_date": "2026-04-14",
+    "value_date": "2026-04-16",
+    "previous_date": "2026-04-15",
     "history": [
-      [
-        "2025-04-15",
-        1588.63
-      ],
       [
         "2025-04-16",
         1578.11
@@ -22564,15 +22572,19 @@
       ],
       [
         "2026-04-15",
-        2373.36
+        2359.44
+      ],
+      [
+        "2026-04-16",
+        2312.92
       ]
     ],
-    "sma50": 2107.8081469726562,
-    "sma200": 2893.6852893066407,
+    "sma50": 2112.6955249023435,
+    "sma200": 2884.472890625,
     "high52w": 4831.3486328125,
     "low52w": 1578.1053466796875,
     "signal": "BEARISH",
-    "commentary": "Ethereum at 2373.36 \u25ac. Signal: BEARISH.",
+    "commentary": "Ethereum at 2312.92 \u25ac. Signal: BEARISH.",
     "momentum": null
   },
   "PUT_CALL": {
@@ -22591,14 +22603,14 @@
     "commentary": "Data unavailable \u2014 using last known value.",
     "momentum": null
   },
-  "_daily_brief": "Risk-on sentiment with 13 bullish signals. Biggest mover: Initial Jobless Claims, up 16K to 219K. Initial claims at 219K \u25b2. Oil above $91 is feeding inflation expectations \u2014 stagflation risk elevated. Key catalyst: Retail Sales (Mar) due tomorrow.",
+  "_daily_brief": "Mixed signals across the board \u2014 13 bullish vs 8 bearish. Biggest mover: Initial Jobless Claims, down 11K to 207K. Initial claims at 207K \u25bc. Oil above $90 is feeding inflation expectations \u2014 stagflation risk elevated. Key catalyst: Retail Sales (Mar) due today.",
   "_weekly_wrap": "This week: 10 indicators improved, 14 deteriorated, 3 unchanged. Nonfarm Payrolls (MoM) moved most, up 318K to +178K. VIX also notable, down 19.4% to 19.23. Overall macro regime unchanged week-over-week. The week was defined by persistent oil-driven inflation pressure. Next week: Retail Sales (Mar) (16 Apr). These could shift the consumption picture.",
   "_forward_look": [
     {
       "title": "Oil shock persistence",
       "probability": "MEDIUM",
       "prob_color": "#ffd24d",
-      "text": "If oil holds above $91 through month-end, expect next CPI to print 2.6\u20132.8% \u2014 above consensus. This would push rate cut expectations to zero for H1 2026 and pressure equities toward 6,672 support.",
+      "text": "If oil holds above $90 through month-end, expect next CPI to print 2.6\u20132.8% \u2014 above consensus. This would push rate cut expectations to zero for H1 2026 and pressure equities toward 6,677 support.",
       "impacts": [
         [
           "S&P",
@@ -22695,6 +22707,6 @@
     }
   ],
   "_meta": {
-    "last_updated": "2026-04-15 22:08 UTC"
+    "last_updated": "2026-04-16 15:03 UTC"
   }
 }
