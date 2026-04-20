@@ -1,7 +1,7 @@
 // Macro Pulse — Service Worker
 // Caches the dashboard for offline viewing. Auto-updates on new deploys.
 
-const CACHE_VERSION = '20260420145610';
+const CACHE_VERSION = '20260420220725';
 const CACHE_NAME = 'macro-pulse-' + CACHE_VERSION;
 const STATIC_ASSETS = [
   './',
